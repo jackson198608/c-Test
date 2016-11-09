@@ -7,9 +7,15 @@
 //
 
 #include <iostream>
+#include <unistd.h>
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    int pipeFd[2];
+    if(pipe(pipeFd)==-1){
+        perror("pipe");
+        exit(EXIT_FAILURE);
+    }
+    std::cout<<"test"<<std::endl;
+    
 }

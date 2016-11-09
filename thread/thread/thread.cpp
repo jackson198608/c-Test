@@ -10,9 +10,9 @@
 class Thread
 {
     public:
+    
         int name;
         void doTest();
-    
     private:
         int how;
 };
